@@ -4,3 +4,8 @@ set :user, 'rubyviet'								#user is username of server
 set :branch, :master
 set :deploy_to, "/home/rubyviet/www/servertest"				# directory to deploy
 set :port, 22
+
+default_run_options[:pty] = true
+set :default_environment, {
+  'PATH' => "/home/rubyviet/.rbenv/shims:/home/rubyviet/.rbenv/bin:$PATH"
+}
